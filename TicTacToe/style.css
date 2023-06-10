@@ -1,0 +1,217 @@
+body{
+    background-color: #faf3f3;
+    display: flex;
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* overflow-x: hidden; */
+}
+td{
+    border: 5px solid #333;
+    height: 150px;
+    width:150px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 70px;
+    font-family: "Comic Sans MS",cursive,sans-serif;
+
+}
+table
+{
+    
+    background-image: url(images.jfif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    
+    border-collapse: collapse;
+position: absolute;
+    left: 44%;
+	margin-left: -155px;
+
+/* margin-left: -144px; */
+top: 120px;
+} 
+
+ table tr:first-child  td {
+    border-top: 0;
+}
+
+table tr:last-child  td {
+    border-bottom: 0;
+}
+table tr  td:first-child {
+    border-left: 0;
+}
+table tr  td:last-child {
+    border-right: 0;
+}
+
+.endgame
+{
+    display: none;
+  width:  200px;
+  top: 250px;
+  background-color: rgba(205, 133, 63, 0.8);
+  position: absolute;
+  left: 43.5%;
+  margin-left: -1%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  font-size: 2em; 
+  font-family: "Comic Sans MS",cursive,sans-serif;
+
+}
+
+#cell
+{
+  border-radius: 10px;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200,900');
+
+:root {
+  --text-color: rgb(75, 79, 82);
+  --shadow-color: hsla(210, 40%, 52%, .4);
+  --btn-color: hsla(31, 95%, 63%, 0.921);
+  --bg-color: #937aa8;
+}
+
+/* * {
+  box-sizing: border-box;
+} */
+
+/* html, body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-color);
+} */
+
+
+#player2 {
+    
+    
+    left: 600px;
+    
+}
+#player1 {
+    left: 300px;
+     
+}
+
+button {
+  position:relative;
+  padding: 10px 20px;  
+  border: none;
+  background: none;
+  cursor: pointer;
+  
+  font-family: "Comic Sans MS",cursive,sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 30px;  
+  color: var(--text-color);
+  width: 300px;
+  background-color: var(--btn-color);
+  box-shadow: var(--shadow-color) 2px 2px 22px;
+  border-radius: 9px; 
+  z-index: 0;  
+  overflow: hidden;  
+  margin: 0.5em 0; 
+}
+
+button:focus {
+  outline-color: transparent;
+  box-shadow: var(--btn-color) 2px 2px 22px;
+}
+
+.right::after, button::after {
+  content: var(--content);
+  display: block;
+  position: absolute;
+  white-space: nowrap;
+  padding: 40px 40px;
+  pointer-events:none;
+}
+
+/* button::after{
+  font-weight: 200;
+  top: -30px;
+  left: -20px;
+}  */
+
+/* .right, .left {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+} */
+/* .right {
+  left: 66%;
+}
+.left {
+  right: 66%;
+}
+.right::after {
+  top: -30px;
+  left: calc(-66% - 20px);
+  
+  background-color: var(--bg-color);
+  color:transparent;
+  transition: transform .4s ease-out;
+  transform: translate(0, -90%) rotate(0deg)
+} */
+
+button:hover .right::after {
+  transform: translate(0, -47%) rotate(0deg)
+}
+
+button .right:hover::after {
+  transform: translate(0, -50%) rotate(-7deg)
+}
+
+button .left:hover ~ .right::after {
+  transform: translate(0, -50%) rotate(7deg)
+}
+
+/* bubbles */
+button::before {
+  content: '';
+  pointer-events: none;
+  opacity: .6;
+  background:
+    radial-gradient(circle at 20% 35%,  transparent 0,  transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
+    radial-gradient(circle at 75% 44%, transparent 0,  transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
+    radial-gradient(circle at 46% 52%, transparent 0, transparent 4px, var(--text-color) 5px, var(--text-color) 6px, transparent 6px);
+
+  width: 100%;
+  height: 300%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  animation: bubbles 5s linear infinite both;
+}
+
+@keyframes bubbles {
+  from {
+    transform: translate();
+  }
+  to {
+    transform: translate(0, -66.666%);
+  }
+}
+
+#replay
+{
+    position: bottom;
+    margin-bottom: 2px;
+    margin-top: 600px;
+    margin-right: 39%;
+    background-color: rgb(253, 76, 126);
+}
